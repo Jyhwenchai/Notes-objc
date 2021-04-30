@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uQ1-Jw-LsR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="lCO-45-3vv">
+            <objects>
+                <navigationController id="uQ1-Jw-LsR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pqj-xW-Jod">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YxP-9j-QLE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vFT-Hy-jSI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1774" y="38"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e09-aJ-VFt">
+                                <rect key="frame" x="126.5" y="188" width="161" height="32"/>
+                                <segments>
+                                    <segment title="消息1"/>
+                                    <segment title="消息2"/>
+                                    <segment title="消息3"/>
+                                </segments>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vo3-eB-dPP"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxs-NL-xto">
+                                <rect key="frame" x="167" y="455.5" width="80" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="PAx-uE-SnI"/>
+                                    <constraint firstAttribute="height" constant="39" id="l6n-jN-AU4"/>
+                                </constraints>
+                                <state key="normal" title="跳转"/>
+                                <connections>
+                                    <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QtG-JU-h7n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kxs-NL-xto" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PaC-Z4-LgU"/>
+                            <constraint firstItem="e09-aJ-VFt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TXW-mA-9Bg"/>
+                            <constraint firstItem="e09-aJ-VFt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="YaP-bC-ODL"/>
+                            <constraint firstItem="kxs-NL-xto" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="vKj-eA-7EB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TlZ-x2-H2u"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="e09-aJ-VFt" id="x7Q-B6-vbT"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-943.47826086956525" y="37.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
